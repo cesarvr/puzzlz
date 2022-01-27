@@ -1,3 +1,3 @@
 ## Programming Puzzles 
 
-Just quick and dirty algorithms :). 
+Just some quick and dirty algorithms :). 
