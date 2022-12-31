@@ -6,7 +6,7 @@
 
 struct Puzzle19 {
     std::map<std::string, std::vector<std::string>> molecules;
-    std::string seed;
+    std::string target;
 };
 
 Puzzle19 load_file(std::string&& filename){
@@ -30,11 +30,36 @@ Puzzle19 load_file(std::string&& filename){
             puzzle19.molecules[key].push_back(value);
             continue;
         }else{
-            puzzle19.seed = line;
+            puzzle19.target = line;
         }
     }
 
     return puzzle19;
+}
+
+
+std::vector<std::string> replacer(std::string &key, std::vector<std::string> replacements, std::string& candidate){
+    int starting_position = candidate.find_first_of(key, 0);
+    while(starting_position != std::string::npos){
+
+
+        starting_position = candidate.find_first_of(key, starting_position);
+    }
+
+    for(auto& replacement: replacements){
+
+    }
+}
+
+void solution1(Puzzle19& input, std::string& target){
+    int starting_position = 0;
+    for(auto &pair: input.molecules){
+
+        auto key = pair.first;
+        auto value = pair.second;
+
+
+    }
 }
 
 int main() {
