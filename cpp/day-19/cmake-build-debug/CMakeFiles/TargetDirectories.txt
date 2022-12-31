@@ -1,0 +1,3 @@
+/Users/cesar/Workspace/puzzlz/cpp/day-19/cmake-build-debug/CMakeFiles/day_19.dir
+/Users/cesar/Workspace/puzzlz/cpp/day-19/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/cesar/Workspace/puzzlz/cpp/day-19/cmake-build-debug/CMakeFiles/rebuild_cache.dir
