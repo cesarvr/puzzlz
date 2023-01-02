@@ -37,42 +37,48 @@ Puzzle19 load_file(std::string&& filename){
     return puzzle19;
 }
 
-
 std::vector<std::string> replacer(std::string &key, std::vector<std::string> replacements, std::string& candidate){
-    int starting_position = candidate.find_first_of(key, 0);
+    int starting_position = candidate.find_first_of(key);
+    auto key_len = key.size();
     std::vector<std::string> replaced_strings;
-    while(starting_position != std::string::npos){
-        int index = 0;
-        for(auto& replacement: replacements){
-            if(replaced_strings[index].empty()){
-                replaced_strings[index] = candidate;
-            }
 
-            replaced_strings[index].replace(starting_position, std::string::npos, key);
-            index++;
+    while(starting_position != std::string::npos){
+        for(auto& replacement: replacements){
+            replaced_strings.push_back(candidate);
+            replaced_strings.back().replace(starting_position, key_len, replacement);
         }
 
-        starting_position = candidate.find_first_of(key, starting_position);
+        starting_position = candidate.find(key, starting_position + key_len);
     }
 
-
+    return replaced_strings;
 }
 
-void solution1(Puzzle19& input, std::string& target){
-    int starting_position = 0;
-    for(auto &pair: input.molecules){
-
+std::map<std::string, bool> solution1(std::map<std::string, std::vector<std::string>>& molecules, std::string& target){
+    std::map<std::string, bool> mutation_mapping;
+    for(auto &pair: molecules){
         auto key = pair.first;
         auto value = pair.second;
+        auto mutations = replacer(key, value, target);
 
-
+        for(auto& mutation: mutations){
+            mutation_mapping[mutation] = true;
+            std::cout << "mutation: " << mutation << std::endl;
+        }
     }
+
+    return mutation_mapping;
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    auto puzzle_input = load_file("test1.dat");
+    auto puzzle_input = load_file("prod.dat");
 
     std::cout << "size: " << puzzle_input.molecules.size() << std::endl;
+    auto resp1 = solution1(puzzle_input.molecules, puzzle_input.target);
+
+    std::cout << "solution 1: " << resp1.size() << std::endl;
+    for(auto& kv: resp1) {
+        std::cout << kv.first << std::endl;
+    }
     return 0;
 }
