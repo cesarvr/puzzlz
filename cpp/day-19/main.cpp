@@ -40,15 +40,22 @@ Puzzle19 load_file(std::string&& filename){
 
 std::vector<std::string> replacer(std::string &key, std::vector<std::string> replacements, std::string& candidate){
     int starting_position = candidate.find_first_of(key, 0);
+    std::vector<std::string> replaced_strings;
     while(starting_position != std::string::npos){
+        int index = 0;
+        for(auto& replacement: replacements){
+            if(replaced_strings[index].empty()){
+                replaced_strings[index] = candidate;
+            }
 
+            replaced_strings[index].replace(starting_position, std::string::npos, key);
+            index++;
+        }
 
         starting_position = candidate.find_first_of(key, starting_position);
     }
 
-    for(auto& replacement: replacements){
 
-    }
 }
 
 void solution1(Puzzle19& input, std::string& target){
