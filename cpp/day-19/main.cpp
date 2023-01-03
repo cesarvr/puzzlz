@@ -38,7 +38,7 @@ Puzzle19 load_file(std::string&& filename){
 }
 
 std::vector<std::string> replacer(std::string &key, std::vector<std::string> replacements, std::string& candidate){
-    int starting_position = candidate.find_first_of(key);
+    int starting_position = candidate.find(key);
     auto key_len = key.size();
     std::vector<std::string> replaced_strings;
 
@@ -61,9 +61,8 @@ std::map<std::string, bool> solution1(std::map<std::string, std::vector<std::str
         auto value = pair.second;
         auto mutations = replacer(key, value, target);
 
-        for(auto& mutation: mutations){
+        for(auto mutation: mutations){
             mutation_mapping[mutation] = true;
-            std::cout << "mutation: " << mutation << std::endl;
         }
     }
 
@@ -77,8 +76,6 @@ int main() {
     auto resp1 = solution1(puzzle_input.molecules, puzzle_input.target);
 
     std::cout << "solution 1: " << resp1.size() << std::endl;
-    for(auto& kv: resp1) {
-        std::cout << kv.first << std::endl;
-    }
+    
     return 0;
 }

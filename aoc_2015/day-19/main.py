@@ -151,15 +151,20 @@ def solving_part_two(parts, desired_molecule):
         print('progress: ', progress(_m, desired_molecule, k), ' size: ', len(_m))
 
 
-[replacements, molecule] = read_puzzle_input('p4.txt')
+[replacements, molecule] = read_puzzle_input('puzzle.txt')
 print('replacements: ', replacements, ' \nmolecule:', molecule)
 sol = solving_part_one(turn_into_dict(replacements), molecule)
 
-# print('solution 1: ', len(sol))
+print(sol)
+with open("./output.txt", "w") as txt_file:
+    for n in sol:
+        txt_file.write(n+"\n")
 
-sol = solving_part_one(turn_into_dict(replacements), molecule)
+print('solution 1: ', len(sol))
 
-i1 = time.time()
-steps = solving_part_two(turn_into_dict(replacements), molecule)
+#sol = solving_part_one(turn_into_dict(replacements), molecule)
 
-print('Solution puzzle 2: ', steps, ' time: ', time.time() - i1)
+#i1 = time.time()
+#steps = solving_part_two(turn_into_dict(replacements), molecule)
+
+#print('Solution puzzle 2: ', steps, ' time: ', time.time() - i1)
