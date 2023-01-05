@@ -26,7 +26,6 @@ Puzzle19 load_file(std::string&& filename){
 
         if(line.find("=>") != std::string::npos) {
             iss >> key >> amp >> value;
-            std::cout << "key: " << key << " value: " << value << std::endl;
             puzzle19.molecules[key].push_back(value);
             continue;
         }else{
@@ -69,13 +68,27 @@ std::map<std::string, bool> solution1(std::map<std::string, std::vector<std::str
     return mutation_mapping;
 }
 
+void solve_problem_1(Puzzle19& p){
+    auto resp1 = solution1(p.molecules, p.target);
+    std::cout << "solution 1: " << resp1.size() << std::endl;
+}
+
+void solve_problem_2(Puzzle19& p){
+    auto seeds = p.molecules["e"];
+    p.molecules.erase("e");
+    int mutations = 0;
+
+    while(true){
+        for(auto seed: seeds){
+            
+        }
+        mutations++;
+    }
+}
+
 int main() {
     auto puzzle_input = load_file("prod.dat");
 
-    std::cout << "size: " << puzzle_input.molecules.size() << std::endl;
-    auto resp1 = solution1(puzzle_input.molecules, puzzle_input.target);
 
-    std::cout << "solution 1: " << resp1.size() << std::endl;
-    
     return 0;
 }
