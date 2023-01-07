@@ -3,9 +3,11 @@
 #include <sstream>
 #include <map>
 #include <vector>
+#include <unordered_map>
+#include <algorithm>
 
-using Molecules = std::map<std::string, std::vector<std::string>>;
-using Mutation = std::map<std::string, bool>;
+using Molecules = std::unordered_map<std::string, std::vector<std::string>>;
+using Mutation = std::unordered_map<std::string, bool>;
 
 struct Puzzle19 {
     Molecules molecules;
@@ -56,7 +58,8 @@ std::vector<std::string> replacer(std::string &key, std::vector<std::string> rep
     return replaced_strings;
 }
 
-void solution1(Molecules& molecules, std::string& target, Mutation& mutation_mapping){
+Mutation solution1(Molecules& molecules, std::string& target){
+    Mutation mutation_mapping;
     for(auto &pair: molecules){
         auto key = pair.first;
         auto value = pair.second;
@@ -66,19 +69,35 @@ void solution1(Molecules& molecules, std::string& target, Mutation& mutation_map
             mutation_mapping[mutation] = true;
         }
     }
+
+    return mutation_mapping;
 }
 
 void solve_problem_1(Puzzle19& p){
-    Mutation mutations;
-    solution1(p.molecules, p.target, mutations);
+    Mutation mutations = solution1(p.molecules, p.target);
     std::cout << "solution 1: " << mutations.size() << std::endl;
 }
 
-int cmp(std::string& s1, std::string& s2){
-    int limit = std::min(s1.size(), s2.size());
-    for(int i=0; i<limit; i++){
-        if(s1[i] !== s2[i])
+int get_max_len(Molecules& molecules){
+    int _max = -1;
+
+    for(auto& molecule: molecules){
+        int n = molecule.first.size();
+        _max = std::max(_max, n);
     }
+
+    return _max;
+}
+
+int get_progress(std::string& candidate, std::string& target){
+    int limit = std::min(candidate.size(), target.size());
+    int progress_counter = 0;
+    for(progress_counter=0; progress_counter<limit; progress_counter++){
+        if(candidate[progress_counter] != target[progress_counter]){
+            return progress_counter;
+        }
+    }
+    return progress_counter;
 }
 
 int solve_problem_2(Puzzle19& p){
@@ -86,14 +105,15 @@ int solve_problem_2(Puzzle19& p){
     p.molecules.erase("e");
     int cycles = 2;
     Mutation molecules_states;
-
+    int padding = get_max_len(p.molecules);
+    std::cout << "padding -> " << padding << std::endl;
 
     while(true){
         for(auto seed: seeds){
-            solution1(p.molecules, seed, molecules_states);
+            molecules_states = solution1(p.molecules, seed);
         }
 
-        if(molecules_states[p.target]){
+        if(molecules_states.find(p.target) != molecules_states.end()){
             std::cout << "target -> " << p.target << std::endl;
             std::cout << "steps -> " << cycles << std::endl;
             return cycles;
@@ -101,7 +121,9 @@ int solve_problem_2(Puzzle19& p){
 
         seeds.clear();
         for(auto& kv: molecules_states){
-            seeds.push_back(kv.first);
+            std::string key = kv.first;
+            int progress = get_progress(key, p.target);
+            seeds.push_back(key);
         }
 
         molecules_states.clear();
@@ -110,9 +132,9 @@ int solve_problem_2(Puzzle19& p){
 }
 
 int main() {
-    auto puzzle_input = load_file("test3_2.dat");
-    //solve_problem_1(puzzle_input);
-    solve_problem_2(puzzle_input);
+    auto puzzle_input = load_file("prod.dat");
+    solve_problem_1(puzzle_input);
+    //solve_problem_2(puzzle_input);
 
     return 0;
 }
