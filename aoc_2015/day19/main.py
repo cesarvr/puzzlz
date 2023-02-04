@@ -65,40 +65,73 @@ def get_max_progress(_mutations, _target):
     return max_progress, ret
 
 
+def get_str_window(str, candidate):
+    window_size = 5
+    if len(str) < window_size:
+        return 0, len(str)
+
+    start = get_progress(str, candidate)
+
+    if start + window_size > len(candidate):
+        return start, len(candidate)
+    else:
+        return start, start + window_size
+
+
 def solution_two(_target, _replacements):
     seeds = _replacements['e']
     del _replacements['e']
     cycles = 2
-    cache = {}
+    mutations = []
 
     while True:
+        cache = {}
         for seed in seeds:
-            mutations = solution_one(seed, _replacements)
 
-            for mutation in mutations:
-                cache[mutation] = 1
+            start, final = get_str_window(seed, _target)
+            iterations = solution_one(seed[start:final], _replacements)
 
-            if _target in cache:
-                print("response: ", _target)
-                return cycles
+            for iteration in iterations:
+                cp = list(seed)
+                cp[start:final] = iteration
+                cp = ''.join(cp)
+                if cp not in cache:
+                    cache[cp] = 1
+                    mutations.append(cp)
 
-            progress, candidate_word = get_max_progress(mutations, _target)
-            if progress >= len(_target):
-                print("partial response: ", _target)
-                print("partial candidate_word: ", candidate_word)
-                return cycles
 
-        seeds = list(cache.keys())
-        cache.clear()
+        progress, candidate_word = get_max_progress(mutations, _target)
+
+        if progress >= len(_target):
+            print("partial response: ", _target)
+            print("partial candidate_word: ", candidate_word)
+            return cycles
+
+        print("before", len(mutations))
+        print("-> ", candidate_word)
+
+        if progress > 110:
+            seeds = list(filter(lambda el: get_progress(el, _target) >= (progress * .97), mutations))
+        elif progress > 80:
+            seeds = list(filter(lambda el: get_progress(el, _target) >= (progress * .95), mutations))
+        elif progress > 60:
+            seeds = list(filter(lambda el: get_progress(el, _target) >= (progress * .8), mutations))
+        elif progress > 10:
+            seeds = list(filter(lambda el: get_progress(el, _target) >= (progress * .7), mutations))
+        else:
+            seeds = mutations.copy()
+        print("after", len(seeds))
+
+
+        mutations.clear()
         cycles += 1
 
     return cycles
 
 
-data = open("test3.txt", "r").read().split("\n")
+data = open("input.txt", "r").read().split("\n")
 replacements = get_replacements(data)
 target = read_target(data)
-
 
 print("data -> ", replacements)
 print("target -> ", target)
