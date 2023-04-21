@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="puzzle20" targetName="puzzle20" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e432e3a-33c3-445e-896a-48654be86b3f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../aoc_2015/day20/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/day-19.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-b57293a485ebf36c82cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/day_19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/day_19.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/prod.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test1_2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test1_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test2_2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test3.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/test3_2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3c297281ff9a794dc678.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a41c9705a100dfcc2191.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1e2f42cbed9853528bf0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-02-19T10-55-57-0128.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/puzzle20" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/puzzle20" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-20/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-20/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="nyt7n6sm" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectId" id="2LxR6M5wVNKFY2H8BVnA1eyJNG7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cesar/Workspace/puzzlz/cpp/day20&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="puzzle20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="puzzle20" TARGET_NAME="puzzle20" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="puzzle20" RUN_TARGET_NAME="puzzle20">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e432e3a-33c3-445e-896a-48654be86b3f" name="Changes" comment="" />
+      <created>1676810572023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676810572023</updated>
+      <workItem from="1676810572925" duration="160000" />
+      <workItem from="1676810741938" duration="148000" />
+      <workItem from="1677072328233" duration="607000" />
+      <workItem from="1677097567277" duration="224000" />
+      <workItem from="1677097883884" duration="598000" />
+      <workItem from="1677238809209" duration="4541000" />
+      <workItem from="1677276479706" duration="1165000" />
+      <workItem from="1678535591976" duration="5389000" />
+      <workItem from="1678978004339" duration="1978000" />
+      <workItem from="1678980025275" duration="90000" />
+      <workItem from="1678980219535" duration="1707000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
