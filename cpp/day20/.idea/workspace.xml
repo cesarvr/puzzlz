@@ -21,42 +21,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e432e3a-33c3-445e-896a-48654be86b3f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../aoc_2015/day20/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/day-19.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-b57293a485ebf36c82cc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/day_19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/cmake-build-debug/day_19.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/prod.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test1_2.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test1_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test2.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test2_2.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test3.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-19/test3_2.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3c297281ff9a794dc678.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a41c9705a100dfcc2191.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1e2f42cbed9853528bf0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-02-19T10-55-57-0128.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../aoc_2015/day21/game_db.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../aoc_2015/day21/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-a6837d74f25d2c58bbec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1525e4208a1fcee8de8c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-51aa0339c79e31533896.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-03-16T15-24-45-0700.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-puzzle20-Debug-e0da8a952db5ae62de69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-b57293a485ebf36c82cc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/puzzle20" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/puzzle20" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day-20/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-20/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +77,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="puzzle20" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="puzzle20" TARGET_NAME="puzzle20" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="puzzle20" RUN_TARGET_NAME="puzzle20">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -126,6 +107,9 @@
       <workItem from="1678978004339" duration="1978000" />
       <workItem from="1678980025275" duration="90000" />
       <workItem from="1678980219535" duration="1707000" />
+      <workItem from="1682492628525" duration="642000" />
+      <workItem from="1682586237403" duration="636000" />
+      <workItem from="1684144062866" duration="858000" />
     </task>
     <servers />
   </component>

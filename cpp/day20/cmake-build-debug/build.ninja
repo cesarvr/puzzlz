@@ -48,7 +48,7 @@ build cmake_object_order_depends_target_puzzle20: phony || CMakeFiles/puzzle20.d
 
 build CMakeFiles/puzzle20.dir/main.cpp.o: CXX_COMPILER__puzzle20_Debug /Users/cesar/Workspace/puzzlz/cpp/day20/main.cpp || cmake_object_order_depends_target_puzzle20
   DEP_FILE = CMakeFiles/puzzle20.dir/main.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
   OBJECT_DIR = CMakeFiles/puzzle20.dir
   OBJECT_FILE_DIR = CMakeFiles/puzzle20.dir
 
@@ -61,7 +61,7 @@ build CMakeFiles/puzzle20.dir/main.cpp.o: CXX_COMPILER__puzzle20_Debug /Users/ce
 # Link the executable puzzle20
 
 build puzzle20: CXX_EXECUTABLE_LINKER__puzzle20_Debug CMakeFiles/puzzle20.dir/main.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/puzzle20.dir
   POST_BUILD = :
   PRE_LINK = :
