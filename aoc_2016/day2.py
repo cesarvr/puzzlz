@@ -1,17 +1,59 @@
 class DocV2:
     def __init__(self):
         doc = """
-xxxx1xxxx
-xx2 3 4xx
-5 6 7 8 9
-xxA B Cxx
-xxxxDxxxx
+xx1xx
+x234x
+56789
+xABCx
+xxDxx
 """
 
         self.doc = list(map(lambda n: n.replace(' ', '') , doc.split('\n')))
         self.doc = list(filter(lambda n: n != "",self.doc))
-        self.y = 1
-        self.x = 1
+        self.y = 2
+        self.x = 0
+
+    def nav(self, pos = None):
+        y = self.y 
+        x = self.x 
+
+        if pos == 'U':
+            y = y - 1
+
+        if pos == 'D': 
+            y = y + 1 
+
+        if pos == 'L':
+            x = x - 1
+
+        if pos == 'R':
+            x = x + 1
+        
+
+        if y >= 0 and y <= len(self.doc) and self.doc[y][x] != 'x':
+            self.y = y
+
+        if x >= 0 and x <= len(self.doc[0]) and self.doc[y][x] != 'x':
+            self.x = x
+    
+        return self.doc[self.y][self.x]
+
+
+    def locate(self, positions = ''):
+        curr = ''
+        if positions == '':
+            return self.nav(None)
+        for position in positions:
+            curr = self.nav(position)
+
+        return curr
+
+
+
+        
+
+        
+
 
     def print(self):
         print(f'self.doc {self.doc}')
