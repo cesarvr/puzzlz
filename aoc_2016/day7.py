@@ -31,6 +31,37 @@ def check_AABB(data):
     return False
 
 
+def get_ABA(data):
+    aba = []
+    for i in range(len(data)):
+        if len(data[i:i + 3]) < 3:
+            return aba
+        if data[i:i + 3][0] == data[i:i+3][2]:
+            aba.append(data[i:i+3])
+    return aba
+
+def verify_aba_bab(aba, bab):
+    return aba[0] == bab[1] and aba[2] == bab[1] and aba[1] == bab[0] and aba[1] == bab[2]
+
+def solution2(data):
+    e, hy = get_values(data)
+    abas = []
+    babs = []
+
+    for code in e:
+        abas = abas + get_ABA(code)
+
+    for v in hy:
+        babs = babs + get_ABA(v)
+
+    for aba in abas:
+        for bab in babs:
+            if verify_aba_bab(aba, bab):
+                return True
+
+    return False
+
+
 def solution1(data):
     e, hy = get_values(data)
     val = False
@@ -39,15 +70,12 @@ def solution1(data):
     for code in e:
         val = val or check_AABB(code)
 
-
     for hyv in hy:
         hy_val = hy_val or check_AABB(hyv)
-
 
     if val and not hy_val:
         return True
     return False
-
 
 t1 = "abba[mnop]qrst"
 t2 = "abcd[bddb]xyyx"
@@ -64,6 +92,18 @@ print('t4: ', solution1(t4))
 print('t5: ', solution1(t5))
 print('t6: ', solution1(t6))
 print('t7: ', solution1(t7))
+
+s2t1 = "aba[bab]xyz"
+s2t2 = "xyx[xyx]xyx"
+s2t3 = "aaa[kek]eke"
+s2t4 = "zazbz[bzb]cdb"
+
+print('s2t1: ', solution2(s2t1))
+print('s2t2: ', solution2(s2t2))
+print('s2t3: ', solution2(s2t3))
+print('s2t4: ', solution2(s2t4))
+
+
 
 _input = """
 wysextplwqpvipxdv[srzvtwbfzqtspxnethm]syqbzgtboxxzpwr[kljvjjkjyojzrstfgrw]obdhcczonzvbfby[svotajtpttohxsh]cooktbyumlpxostt
@@ -2068,10 +2108,16 @@ dkodbaotlfdaphwzbcc[ldzeemqiovyqjgs]qxibabdusgaistkru[usglloxgycyynmp]aaocvclsoc
 bwzsacxgqkbjycgfw[dbnligvrmqscasutn]rbgybqqsgjvlonkut
 """
 
-d = _input.split('\n')
-d = filter(lambda n: n != "", d)
-r = map(lambda n: solution1(n), d)
-r = list(filter(lambda n: n, r))
 
-print('cnt: ', len(r), r)
+t = filter(lambda n: n != "", _input.split('\n'))
+tls = map(lambda n: solution1(n), t)
+tls = list(filter(lambda n: n, tls))
+print('TLS: ', len(tls))
+
+s = filter(lambda n: n != "", _input.split('\n'))
+ssl = map(lambda n: solution2(n), s)
+ssl = list(filter(lambda n: n, ssl))
+print('SSL: ', len(ssl))
+
+
 
