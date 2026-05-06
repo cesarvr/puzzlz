@@ -334,6 +334,13 @@ void dbg(BotMap *bots)
     }
 }
 
+void dbg_link(const Link &link){
+        std::cout << "robot " << link.giver->name << " giving its chip lower ";
+        std::cout << link.giver->low << " to: " << link.reciever_low->name; 
+        std::cout << " giving its high one " << link.giver->high << " to: " << link.reciever_high->name ; 
+        std::cout << std::endl;
+}
+
 void lazy_load(BotMap &bots, std::vector<std::string> names)
 {
     for (auto name : names)
@@ -386,20 +393,16 @@ void solve_puzzle_1(std::string payload, int a=2, int b=5)
     // dbg(&bots);
 
     while(true){
-        bool jobs_remaining = true; 
+        bool jobs_remaining = false; 
         for (auto const &link : links)
         {
             if(link.giver->is_ready()){
-                std::cout << link.giver->name << std::endl;
-                jobs_remaining = false;
-                std::cout << "robot " << link.giver->name << " giving its chip lower ";
-                std::cout << link.giver->low << " to: " << link.reciever_low->name; 
-                std::cout << " giving its high one " << link.giver->high << " to: " << link.reciever_high->name ; 
-
-                if(link.giver->check(a,b))
-                    std::cout << "   ## has: " << a << ", " << b << " values ##";
-
-                std::cout << std::endl;
+                jobs_remaining = true;
+           
+                //dbg_link(link);
+                if(link.giver->check(a,b)){
+                    std::cout << link.giver->name << " has: " << a << ", " << b << " values ##";
+                }
 
                 link.reciever_low->add(link.giver->low);
                 link.reciever_high->add(link.giver->high);
@@ -407,7 +410,7 @@ void solve_puzzle_1(std::string payload, int a=2, int b=5)
             }
         }
 
-        if(jobs_remaining)
+        if(!jobs_remaining)
             break;
     }
 
@@ -426,7 +429,6 @@ void solve_puzzle_1(std::string payload, int a=2, int b=5)
 
 int main()
 {
-
     solve_puzzle_1(_input, 61, 17);
-    return 0;
+        return 0;
 }

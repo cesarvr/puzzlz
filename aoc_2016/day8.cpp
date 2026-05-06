@@ -201,7 +201,6 @@ void rotate_row(Pixels &grid, int y, int val){
     }
 
     grid[y] = tmp_row;
-
 }
 
 
