@@ -1077,7 +1077,6 @@ def solve_puzzle(jump_list, fn_solution=None):
     steps = 0
     while True:
         jump_dest = jump_list[stack_pointer] # stack_pointer 1 jump_dest 3
-
         fn_solution(jump_list, stack_pointer, jump_dest)
 
         steps += 1
