@@ -28,12 +28,28 @@ class Node:
         for child in childs:
             child.parent = self.name
             self.childs.append(child)
+    
+    def balanced(self):
+        if not self.childs:
+            return False 
 
+        c1 = self.childs[0].total()
+
+        for child in self.childs:
+            if c1 != child.total():
+                return False
+        
+        return True
+                
+    
     def total(self):
         ret = map(lambda child: child.total(), self.childs)
         return self.value + sum(list(ret))
 
+    def child_total(self):
 
+        ret = map(lambda child: (child.name, child.total()), self.childs)
+        return list(ret)
 
 class NodeTree:
     def __init__(self):
@@ -93,21 +109,36 @@ class NodeTree:
             freq[t] = [node] if t not in freq else freq[t] + [node]
 
         low_key = min(freq, key=lambda k: len(freq[k]))
+        print('F: ', freq)
 
         return freq[low_key] 
-    
+
+
 
     def _find_unbalances_recursively(self, nodes):
-        
-        
-        print('ntotal: ', self._freq(nodes)[0].name)
+        print('unbalance: ', self._freq(nodes)[0].name)
 
-        
 
+    def _find_balance(self, starting_node):
+        for child in starting_node.childs:
+            t = child.total()
+
+            print("name: ", child.name ,"hey: ", t)
+            
+        
     def find_unbalances(self):
         root = self.get_root()
         
-        self._find_unbalances_recursively(root.childs)
+        print('is balanced: ', root.balanced())
+        culprit = self._freq(root.childs)[0]
+
+        print('freq: ', culprit.name, ' -> ', culprit.total(), ' value: ', culprit.value)
+        print('is balanced: ', culprit.balanced())
+        c2 = self._freq(culprit.childs)[0]
+        print('freq: ', c2.name, ' -> ', c2.total(), ' value: ', c2.value)
+
+        print('is balanced: ', c2.balanced(), ' value: ', c2.value-6)
+
         
 
 
@@ -130,4 +161,5 @@ def solve_puzzle_2nd_part(payload):
 payload = open("./d7.db").read()
 
 solve_puzzle_one(payload)
-solve_puzzle_2nd_part(testing_input)
+# wrong 6, good answer 1226 
+solve_puzzle_2nd_part(payload)
